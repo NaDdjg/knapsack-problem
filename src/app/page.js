@@ -64,7 +64,7 @@ export default function Home() {
 
   return (
     <div className="flex flex-col items-center justify-center p-4 min-h-screen bg-[#1A1A1D] text-white">
-      <h1 className="text-2xl font-bold mb-6">Knapsack Problem Solver</h1>
+      <h1 className="text-2xl font-bold mb-6">Knapsack problem solver</h1>
       <KnapsackForm onSubmit={handleFormSubmit} />
       {result && (
         <>
@@ -76,29 +76,37 @@ export default function Home() {
 
           {finalMatrix && (
             <div className="mt-6 w-full">
-              <h3 className="text-xl font-semibold text-center">Final Matrix State</h3>
-              <table className="table-fixed w-full text-center mt-4">
-                <tbody>
-                  {finalMatrix.values.map((row, rowIndex) => (
-                    <tr key={rowIndex}>
-                      {row.map((value, colIndex) => (
-                        <td
-                          key={colIndex}
-                          className={`px-4 py-2 border min-w-[60px] text-base ${value > 0 ? 'bg-green-600' : 'bg-gray-800'}`}
-                        >
-                          {value > 0 ? (
-                            <span className="block text-white">
-                              {value}
-                            </span>
-                          ) : (
-                            <span className="block text-gray-500">0</span>
-                          )}
-                        </td>
-                      ))}
-                    </tr>
-                  ))}
-                </tbody>
-              </table>
+              <h3 className="text-xl font-semibold text-center">Final matrix state</h3>
+              <div className="overflow-x-auto">
+                <table className="table-auto border-collapse w-full text-center mt-4">
+                  <tbody>
+                    {finalMatrix.values.map((row, rowIndex) => (
+                      <tr key={rowIndex}>
+                        {row.map((value, colIndex) => (
+                          <td
+                            key={colIndex}
+                            className={`px-4 py-2 border text-base ${value > 0 ? 'bg-green-600' : 'bg-gray-800'}`}
+                            style={{
+                              minWidth: '60px',
+                              minHeight: '40px',
+                              maxWidth: '80px',
+                              wordWrap: 'break-word',
+                            }}
+                          >
+                            {value > 0 ? (
+                              <span className="block text-white text-sm">
+                                {value}
+                              </span>
+                            ) : (
+                              <span className="block text-gray-500">0</span>
+                            )}
+                          </td>
+                        ))}
+                      </tr>
+                    ))}
+                  </tbody>
+                </table>
+              </div>
             </div>
           )}
         </>
