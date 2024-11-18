@@ -8,12 +8,6 @@ A web application to visualize and solve the 0/1 Knapsack Problem using dynamic 
   3. Matrix Visualization: Shows the final state of the DP matrix, helping users understand how the solution was computed.
 
 ## Steps to run
-- Clone the repository
-```bash
-git clone https://github.com/your-username/knapsack-problem-solver.git
-cd knapsack-problem-solver
-```
-
 - Install dependencies
 ```bash
 npm install
