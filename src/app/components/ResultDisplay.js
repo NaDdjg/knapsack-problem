@@ -24,10 +24,16 @@ export default function ResultDisplay({ selectedItems, maxGain, complexity, fina
                         Algorithm Complexity
                     </h3>
                     <p className="text-sm">
-                        <strong>Time Complexity:</strong> {complexity.time}
+                        <strong>Time Complexity:</strong> O(n×W) = {complexity.time}
                     </p>
                     <p className="text-sm">
-                        <strong>Space Complexity:</strong> {complexity.space}
+                        <strong>Space Complexity:</strong> O(n×W) = {complexity.space}
+                    </p>
+                    <p className="text-sm mt-2">
+                        <strong>
+                            With n: Number of items in the knapsack.
+                            and w the capacity
+                        </strong>
                     </p>
                 </div>
             </div>
